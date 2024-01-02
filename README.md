@@ -1,24 +1,24 @@
 # Fraud-Transaction-Detection
 
-##Data Loading:
+## Data Loading:
 The credit card transactions dataset is loaded into a Pandas DataFrame (df) from a CSV file.
-##Handling Missing Values:
+## Handling Missing Values:
 Any missing values in the dataset are dropped.
-##Data Preparation:
+## Data Preparation:
 Features (X) and the target variable (y) are separated.
 The dataset is split into training and testing sets using the train_test_split function.
-##Data Standardization:
+## Data Standardization:
 The features are standardized using StandardScaler.
-##Handling Class Imbalance:
+## Handling Class Imbalance:
 Synthetic Minority Over-sampling Technique (SMOTE) is applied to address class imbalance in the training set.
-##Model Building:
+## Model Building:
 A Random Forest Classifier is created with a default configuration.
-##Hyperparameter Tuning:
+## Hyperparameter Tuning:
 GridSearchCV is used for hyperparameter tuning. The grid search is performed over the number of estimators and maximum depth of the trees in the Random Forest.
-##Model Training:
+## Model Training:
 The Random Forest model is trained with the best hyperparameters obtained from the grid search.
 
-#code:
+# code:
 ```
 import pandas as pd
 import numpy as np
@@ -87,7 +87,7 @@ misclassified_transactions = X_test.iloc[misclassified_indices]
 print("Misclassified Transactions:")
 print(misclassified_transactions)
 ```
-##Output:
+## Output:
 
 ![image](https://github.com/kavyasenthamarai/Fraud-Transaction-Detection/assets/118668727/b05359b9-ea41-411f-8613-06a736d89eba)
 
